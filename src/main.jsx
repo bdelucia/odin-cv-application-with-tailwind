@@ -5,6 +5,7 @@ import './index.css';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import PersonalInfo from './Personalnfo.jsx';
+import Education from './Education.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -12,6 +13,7 @@ createRoot(document.getElementById('root')).render(
       <Header />
       <div className="flex-grow">
         <PersonalInfo />
+        <Education />
       </div>
       <Footer />
     </div>
