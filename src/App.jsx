@@ -4,9 +4,11 @@ import './App.css';
 function App() {
   return (
     <>
-      <button class="btn btn-primary">Button</button>
-      <button class="btn">Button</button>
-      <button class="btn w-64 rounded-full">Button</button>
+      <button class="btn btn-primary">One</button>
+      <button class="btn btn-secondary">Two</button>
+      <button class="btn btn-accent btn-outline">Three</button>
+      <button class="btn rounded-full">One</button>
+      <button class="btn rounded-none px-16">Two</button>
     </>
   );
 }
