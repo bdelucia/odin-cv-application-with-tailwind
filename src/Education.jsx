@@ -17,16 +17,6 @@ function Education() {
         </fieldset>
 
         <fieldset className="fieldset">
-          <legend className="fieldset-legend">Start Date</legend>
-          <input type="date" className="input" id="educationStartDate" />
-        </fieldset>
-
-        <fieldset className="fieldset">
-          <legend className="fieldset-legend">End Date</legend>
-          <input type="date" className="input" id="educationEndDate" />
-        </fieldset>
-
-        <fieldset className="fieldset">
           <legend className="fieldset-legend">Degree Name</legend>
           <input
             type="text"
@@ -34,6 +24,16 @@ function Education() {
             placeholder="Computer Science"
             id="educationDegreeName"
           />
+        </fieldset>
+
+        <fieldset className="fieldset">
+          <legend className="fieldset-legend">Start Date</legend>
+          <input type="date" className="input" id="educationStartDate" />
+        </fieldset>
+
+        <fieldset className="fieldset">
+          <legend className="fieldset-legend">End Date</legend>
+          <input type="date" className="input" id="educationEndDate" />
         </fieldset>
       </fieldset>
     </>
