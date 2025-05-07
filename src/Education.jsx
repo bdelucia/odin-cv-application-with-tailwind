@@ -1,4 +1,4 @@
-import './index.css';
+import "./index.css";
 
 function Education() {
   return (
@@ -28,12 +28,12 @@ function Education() {
 
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Start Date</legend>
-          <input type="date" className="input" id="educationStartDate" />
+          <input type="date" className="input w-40" id="educationStartDate" />
         </fieldset>
 
         <fieldset className="fieldset">
           <legend className="fieldset-legend">End Date</legend>
-          <input type="date" className="input" id="educationEndDate" />
+          <input type="date" className="input w-40" id="educationEndDate" />
         </fieldset>
       </fieldset>
     </>

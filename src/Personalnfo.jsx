@@ -1,4 +1,4 @@
-import './index.css';
+import "./index.css";
 
 function PersonalInfo() {
   return (
@@ -7,8 +7,37 @@ function PersonalInfo() {
         <legend className="fieldset-legend">Personal Info</legend>
 
         <fieldset className="fieldset">
-          <legend className="fieldset-legend">What is your name?</legend>
-          <input type="text" className="input" placeholder="Type here" />
+          <legend className="fieldset-legend">Full Name</legend>
+          <label className="input validator">
+            <svg
+              className="h-[1em] opacity-50"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <g
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                strokeWidth="2.5"
+                fill="none"
+                stroke="currentColor"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </g>
+            </svg>
+            <input
+              type="text"
+              className="input border-none focus:outline-none focus:ring-0 p-2"
+              placeholder="Todd Howard"
+              name="fullName"
+              required
+              minlength="2"
+              pattern="^[a-zA-Z]+(?: [a-zA-Z]+)*$"
+            />
+          </label>
+          <div className="validator-hint hidden">
+            Name must be at least 2 characters long and contain only letters
+          </div>
         </fieldset>
 
         <fieldset className="fieldset">
@@ -30,9 +59,16 @@ function PersonalInfo() {
                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
               </g>
             </svg>
-            <input type="email" placeholder="mail@site.com" required />
+            <input
+              type="email"
+              className="input border-none focus:outline-none focus:ring-0 p-2"
+              placeholder="mail@site.com"
+              required
+            />
           </label>
-          <div className="validator-hint hidden">Enter valid email address</div>
+          <div className="validator-hint hidden">
+            Enter a valid email address
+          </div>
         </fieldset>
 
         <fieldset className="fieldset">
@@ -58,9 +94,9 @@ function PersonalInfo() {
             </svg>
             <input
               type="tel"
-              className="tabular-nums"
+              className="tabular-nums border-none focus:outline-none focus:ring-0 p-2"
               required
-              placeholder="Phone"
+              placeholder="(123) 456-7890"
               pattern="[0-9]*"
               minlength="10"
               maxlength="10"
