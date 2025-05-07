@@ -3,7 +3,7 @@ import "./index.css";
 function PersonalInfo() {
   return (
     <>
-      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4 flex flex-col items-start text-center">
+      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4 flex flex-col items-start">
         <legend className="fieldset-legend">Personal Info</legend>
 
         <fieldset className="fieldset">
@@ -31,12 +31,12 @@ function PersonalInfo() {
               placeholder="Todd Howard"
               name="fullName"
               required
-              minlength="2"
+              minlength="5"
               pattern="^[a-zA-Z]+(?: [a-zA-Z]+)*$"
             />
           </label>
           <div className="validator-hint hidden">
-            Name must be at least 2 characters long and contain only letters
+            Name must be at least 5 characters long and contain only letters
           </div>
         </fieldset>
 
