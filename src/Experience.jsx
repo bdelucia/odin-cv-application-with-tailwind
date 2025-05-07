@@ -8,22 +8,36 @@ function Experience() {
 
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Job Title</legend>
-          <input
-            type="text"
-            className="input w-xs"
-            placeholder="IT Intern"
-            id="job1Title"
-          />
+          <label className="input validator">
+            <input
+              type="text"
+              className="input border-none focus:outline-none focus:ring-0 p-0"
+              placeholder="IT Intern"
+              id="job1Title"
+              minLength={1}
+              maxLength={50}
+            />
+          </label>
+          <div className="validator-hint hidden">
+            Job title has to be at least 1 characters long and at most 50
+          </div>
         </fieldset>
 
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Company</legend>
-          <input
-            type="text"
-            className="input w-xs"
-            placeholder="OneCall"
-            id="job1CompanyName"
-          />
+          <label className="input validator">
+            <input
+              type="text"
+              className="input border-none focus:outline-none focus:ring-0 p-0"
+              placeholder="OneCall"
+              id="job1CompanyName"
+              minLength={1}
+              maxLength={50}
+            />
+          </label>
+          <div className="validator-hint hidden">
+            Company name has to be at least 1 character long and at most 50
+          </div>
         </fieldset>
 
         <div className="flex flex-row">
@@ -49,22 +63,36 @@ function Experience() {
 
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Job Title</legend>
-          <input
-            type="text"
-            className="input w-xs"
-            placeholder="Server Assistant"
-            id="job2Title"
-          />
+          <label className="input validator">
+            <input
+              type="text"
+              className="input border-none focus:outline-none focus:ring-0 p-0"
+              placeholder="Server Assistant"
+              id="job2Title"
+              minLength={1}
+              maxLength={50}
+            />
+          </label>
+          <div className="validator-hint hidden">
+            Job title has to be at least 1 characters long and at most 50
+          </div>
         </fieldset>
 
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Company</legend>
-          <input
-            type="text"
-            className="input w-xs"
-            placeholder="Top Shelf"
-            id="job2CompanyName"
-          />
+          <label className="input validator">
+            <input
+              type="text"
+              className="input border-none focus:outline-none focus:ring-0 p-0"
+              placeholder="Top Shelf"
+              id="job2CompanyName"
+              minLength={1}
+              maxLength={50}
+            />
+          </label>
+          <div className="validator-hint hidden">
+            Company name has to be at least 1 character long and at most 50
+          </div>
         </fieldset>
 
         <div className="flex flex-row">
