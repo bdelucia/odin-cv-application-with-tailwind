@@ -3,7 +3,7 @@ import "./index.css";
 function PersonalInfo() {
   return (
     <>
-      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4 flex flex-col items-start text-center">
         <legend className="fieldset-legend">Personal Info</legend>
 
         <fieldset className="fieldset">

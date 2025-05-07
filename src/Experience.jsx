@@ -3,7 +3,7 @@ import "./index.css";
 function Experience() {
   return (
     <>
-      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4">
+      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4 flex flex-col items-start text-center">
         <legend className="fieldset-legend">Experience</legend>
 
         <fieldset className="fieldset">
@@ -26,20 +26,21 @@ function Experience() {
           />
         </fieldset>
 
-        <fieldset className="fieldset">
-          <legend className="fieldset-legend">Start Date</legend>
-          <input type="date" className="input w-40" id="job1StartDate" />
-        </fieldset>
-
-        <fieldset className="fieldset">
-          <legend className="fieldset-legend">End Date</legend>
-          <input type="date" className="input w-40" id="job1EndDate" />
-        </fieldset>
+        <div className="flex flex-row">
+          <fieldset className="fieldset">
+            <legend className="fieldset-legend">Start Date</legend>
+            <input type="date" className="input w-40" id="job1StartDate" />
+          </fieldset>
+          <fieldset className="fieldset">
+            <legend className="fieldset-legend">End Date</legend>
+            <input type="date" className="input w-40" id="job1EndDate" />
+          </fieldset>
+        </div>
 
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Job Responsibilities</legend>
           <textarea
-            className="textarea h-24 w-xl"
+            className="textarea h-24 w-lg"
             placeholder="Did things in C#"
           ></textarea>
         </fieldset>
@@ -66,20 +67,21 @@ function Experience() {
           />
         </fieldset>
 
-        <fieldset className="fieldset">
-          <legend className="fieldset-legend">Start Date</legend>
-          <input type="date" className="input w-40" id="job2StartDate" />
-        </fieldset>
-
-        <fieldset className="fieldset">
-          <legend className="fieldset-legend">End Date</legend>
-          <input type="date" className="input w-40" id="job2EndDate" />
-        </fieldset>
+        <div className="flex flex-row">
+          <fieldset className="fieldset">
+            <legend className="fieldset-legend">Start Date</legend>
+            <input type="date" className="input w-40" id="job2StartDate" />
+          </fieldset>
+          <fieldset className="fieldset">
+            <legend className="fieldset-legend">End Date</legend>
+            <input type="date" className="input w-40" id="job2EndDate" />
+          </fieldset>
+        </div>
 
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Job Responsibilities</legend>
           <textarea
-            className="textarea h-24 w-xl"
+            className="textarea h-24 w-lg"
             placeholder="Cleaned tables, put away dishes"
           ></textarea>
         </fieldset>
