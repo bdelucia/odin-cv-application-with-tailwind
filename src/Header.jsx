@@ -2,9 +2,9 @@ import "./index.css";
 import ThemeSwitcher from "./ThemeSwitcher";
 function Header() {
   return (
-    <header className="navbar bg-base-200">
+    <header className="navbar bg-secondary text-primary-content">
       <div className="navbar-start">
-        <a className="btn btn-ghost normal-case text-xl">My Website</a>
+        <a className="btn btn-ghost normal-case text-xl">React Resume Maker</a>
       </div>
       <div className="navbar-end p-2">
         <div id="theme-switcher">
