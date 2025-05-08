@@ -8,15 +8,21 @@ import PersonalInfo from "./Personalnfo.jsx";
 import Education from "./Education.jsx";
 import Experience from "./Experience.jsx";
 import ThemeSwitcher from "./ThemeSwitcher.jsx";
+import ResumePreview from "./ResumePreview.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <div className="min-h-screen flex flex-col">
       <Header />
-      <div className="flex-grow pl-8 pb-4">
-        <PersonalInfo />
-        <Education />
-        <Experience />
+      <div className="flex justify-between">
+        <div id="leftContainer" className="pl-16">
+          <PersonalInfo />
+          <Education />
+          <Experience />
+        </div>
+        <div id="rightContainer" className="pr-16 pt-4">
+          <ResumePreview />
+        </div>
       </div>
       <Footer />
     </div>

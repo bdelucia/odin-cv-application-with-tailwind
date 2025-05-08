@@ -18,7 +18,7 @@ function Education() {
             />
           </label>
           <div className="validator-hint hidden">
-            University name has to be at least 4 characters long
+            Name has to be at least 4 characters long
           </div>
         </fieldset>
 
@@ -34,7 +34,7 @@ function Education() {
             />
           </label>
           <div className="validator-hint hidden">
-            Degree name has to be at least 4 characters long
+            Name has to be at least 4 characters long
           </div>
         </fieldset>
 

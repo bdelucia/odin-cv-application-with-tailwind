@@ -27,7 +27,7 @@ function PersonalInfo() {
             </svg>
             <input
               type="text"
-              className="input border-none focus:outline-none focus:ring-0 p-2"
+              className="input border-none focus:outline-none w-full focus:ring-0 p-2"
               placeholder="Todd Howard"
               name="fullName"
               required
@@ -36,7 +36,7 @@ function PersonalInfo() {
             />
           </label>
           <div className="validator-hint hidden">
-            Name must be at least 5 characters long and contain only letters
+            Name must be at least 5 characters long
           </div>
         </fieldset>
 

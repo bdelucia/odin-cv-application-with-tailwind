@@ -12,6 +12,7 @@ function Experience() {
             <input
               type="text"
               className="input border-none focus:outline-none focus:ring-0 p-0"
+              required
               placeholder="IT Intern"
               id="job1Title"
               minLength={1}
@@ -19,7 +20,7 @@ function Experience() {
             />
           </label>
           <div className="validator-hint hidden">
-            Job title has to be at least 1 characters long and at most 50
+            Title has to be at least 1 characters long
           </div>
         </fieldset>
 
@@ -29,6 +30,7 @@ function Experience() {
             <input
               type="text"
               className="input border-none focus:outline-none focus:ring-0 p-0"
+              required
               placeholder="OneCall"
               id="job1CompanyName"
               minLength={1}
@@ -36,7 +38,7 @@ function Experience() {
             />
           </label>
           <div className="validator-hint hidden">
-            Company name has to be at least 1 character long and at most 50
+            Name has to be at least 1 character long
           </div>
         </fieldset>
 
@@ -67,6 +69,7 @@ function Experience() {
             <input
               type="text"
               className="input border-none focus:outline-none focus:ring-0 p-0"
+              required
               placeholder="Server Assistant"
               id="job2Title"
               minLength={1}
@@ -74,7 +77,7 @@ function Experience() {
             />
           </label>
           <div className="validator-hint hidden">
-            Job title has to be at least 1 characters long and at most 50
+            Title has to be at least 1 character long
           </div>
         </fieldset>
 
@@ -84,6 +87,7 @@ function Experience() {
             <input
               type="text"
               className="input border-none focus:outline-none focus:ring-0 p-0"
+              required
               placeholder="Top Shelf"
               id="job2CompanyName"
               minLength={1}
@@ -91,7 +95,7 @@ function Experience() {
             />
           </label>
           <div className="validator-hint hidden">
-            Company name has to be at least 1 character long and at most 50
+            Name has to be at least 1 character long
           </div>
         </fieldset>
 
