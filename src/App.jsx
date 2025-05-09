@@ -35,7 +35,7 @@ function App() {
     startDate: "YYYY-MM-DD",
     endDate: "YYYY-MM-DD",
     description:
-      "Completed a rigorous four-year alchemical program with honors, specializing in combat-ready potions, resistance tonics, and field-ready antidotes. - Conducted independent research on Nirnroot reactivity under the mentorship of Master Sinderion’s successor, contributing to the Weald Journal of Rare Botanicals.",
+      "- Completed a rigorous four-year alchemical program with honors, specializing in combat-ready potions, resistance tonics, and field-ready antidotes. - Conducted independent research on Nirnroot reactivity under the mentorship of Master Sinderion’s successor, contributing to the Weald Journal of Rare Botanicals.",
   });
 
   return (
