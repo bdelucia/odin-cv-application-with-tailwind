@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
-import PersonalInfo from "./Personalnfo.jsx";
-import Education from "./Education.jsx";
-import Experience from "./Experience.jsx";
-import ResumePreview from "./ResumePreview.jsx";
+import React, { useState } from 'react';
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
+import PersonalInfo from './PersonalInfo.jsx';
+import Education from './Education.jsx';
+import Experience from './Experience.jsx';
+import ResumePreview from './ResumePreview.jsx';
 
 function App() {
   const [person, setPerson] = useState({
-    personalFullName: "Todd Howard",
-    personalEmail: "mail@site.com",
-    personalPhone: "123-456-7890",
+    personalFullName: 'Todd Howard',
+    personalEmail: 'mail@site.com',
+    personalPhone: '123-456-7890',
   });
 
   return (
