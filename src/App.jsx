@@ -14,15 +14,24 @@ function App() {
   });
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col items-center align-middle">
       <Header />
-      <div className="flex justify-between">
-        <div id="leftContainer" className="pl-16">
+      {/* Main container with responsive flex direction */}
+      <div className="flex flex-col 2xl:flex-row items-center 2xl:items-start justify-center gap-8 pb-4">
+        {/* Left container - centered on mobile, aligned left on 2xl */}
+        <div
+          id="leftContainer"
+          className="w-full max-w-2xl flex flex-col items-center align-middle"
+        >
           <PersonalInfo person={person} setPerson={setPerson} />
           <Education />
           <Experience />
         </div>
-        <div id="rightContainer" className="pr-16 pt-4">
+        {/* Right container - centered on mobile, aligned right on 2xl */}
+        <div
+          id="rightContainer"
+          className="w-full flex flex-col items-center align-middle max-w-2xl pt-4 pb-4"
+        >
           <ResumePreview person={person} />
         </div>
       </div>
