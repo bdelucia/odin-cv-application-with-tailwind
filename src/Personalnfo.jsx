@@ -1,6 +1,14 @@
 import "./index.css";
 
 function PersonalInfo({ person, setPerson }) {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setPerson((prevPerson) => ({
+      ...prevPerson,
+      [name]: value,
+    }));
+  };
+
   const handleEditClick = () => {
     const fullName = document.querySelector("input[name=personalFullName]");
     const email = document.querySelector("input[name=personalEmail]");
@@ -25,15 +33,19 @@ function PersonalInfo({ person, setPerson }) {
     const fullName = document.querySelector("input[name=personalFullName]");
     const email = document.querySelector("input[name=personalEmail]");
     const phone = document.querySelector("input[name=personalPhone]");
+    const saveBtn = document.getElementById("personalInfoSaveBtn");
+    const editBtn = document.getElementById("personalInfoEditBtn");
 
     fullName.setAttribute("disabled", "true");
     email.setAttribute("disabled", "true");
     phone.setAttribute("disabled", "true");
+    saveBtn.classList.add("hidden");
+    editBtn.classList.remove("btn-disabled");
 
     setPerson({
-      fullName: fullName.value,
-      email: email.value,
-      phone: phone.value,
+      personalFullName: fullName.value,
+      personalEmail: email.value,
+      personalPhone: phone.value,
     });
   };
 
@@ -69,6 +81,8 @@ function PersonalInfo({ person, setPerson }) {
               className="input border-none focus:outline-none w-full focus:ring-0 p-2"
               placeholder="Todd Howard"
               name="personalFullName"
+              value={person.personalFullName}
+              onChange={handleChange}
               required
               minlength="5"
               pattern="^[a-zA-Z]+(?: [a-zA-Z]+)*$"
@@ -102,6 +116,8 @@ function PersonalInfo({ person, setPerson }) {
             <input
               type="email"
               name="personalEmail"
+              value={person.personalEmail}
+              onChange={handleChange}
               className="input border-none focus:outline-none focus:ring-0 p-2"
               placeholder="mail@site.com"
               disabled
@@ -137,6 +153,8 @@ function PersonalInfo({ person, setPerson }) {
             <input
               type="tel"
               name="personalPhone"
+              value={person.personalPhone}
+              onChange={handleChange}
               className="tabular-nums border-none focus:outline-none focus:ring-0 p-2"
               required
               placeholder="(123) 456-7890"

@@ -1,4 +1,3 @@
-// App.jsx
 import React, { useState } from "react";
 import Header from "./Header.jsx";
 import Footer from "./Footer.jsx";
@@ -9,9 +8,9 @@ import ResumePreview from "./ResumePreview.jsx";
 
 function App() {
   const [person, setPerson] = useState({
-    fullName: "Todd Howard",
-    email: "mail@site.com",
-    phone: "123-456-7890",
+    personalFullName: "Todd Howard",
+    personalEmail: "mail@site.com",
+    personalPhone: "123-456-7890",
   });
 
   return (
