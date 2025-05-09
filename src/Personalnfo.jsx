@@ -1,13 +1,6 @@
 import "./index.css";
-import { useState } from "react";
-import saveIcon from "./assets/save.svg";
-function PersonalInfo() {
-  const [person, setPerson] = useState({
-    fullName: "Todd Howard",
-    email: "mail@site.com",
-    phone: "123-456-7890",
-  });
 
+function PersonalInfo({ person, setPerson }) {
   const handleEditClick = () => {
     const fullName = document.querySelector("input[name=personalFullName]");
     const email = document.querySelector("input[name=personalEmail]");
@@ -17,36 +10,25 @@ function PersonalInfo() {
     email.value = person.email;
     phone.value = person.phone;
 
-    fullName.removeAttribute("readonly");
-    email.removeAttribute("readonly");
-    phone.removeAttribute("readonly");
+    fullName.removeAttribute("disabled");
+    email.removeAttribute("disabled");
+    phone.removeAttribute("disabled");
 
     const editBtn = document.getElementById("personalInfoEditBtn");
     editBtn.classList.add("btn-disabled");
 
-    const personalInfoBtnContainer = document.getElementById(
-      "personalInfoBtnContainer"
-    );
-
-    const saveBtn = document.createElement("button");
-    saveBtn.classList.add("btn", "btn-accent");
-    saveBtn.id = "personalInfoSaveBtn";
-    const img = document.createElement("img");
-    img.src = saveIcon;
-    img.alt = "Save icon";
-    img.classList.add("size-6");
-    saveBtn.appendChild(img);
-    saveBtn.appendChild(document.createTextNode("Save"));
-    saveBtn.onclick = () => {
-      handleSaveChange();
-    };
-    personalInfoBtnContainer.appendChild(saveBtn);
+    const saveBtn = document.getElementById("personalInfoSaveBtn");
+    saveBtn.classList.remove("hidden");
   };
 
   const handleSaveChange = () => {
     const fullName = document.querySelector("input[name=personalFullName]");
     const email = document.querySelector("input[name=personalEmail]");
     const phone = document.querySelector("input[name=personalPhone]");
+
+    fullName.setAttribute("disabled", "true");
+    email.setAttribute("disabled", "true");
+    phone.setAttribute("disabled", "true");
 
     setPerson({
       fullName: fullName.value,
@@ -90,6 +72,7 @@ function PersonalInfo() {
               required
               minlength="5"
               pattern="^[a-zA-Z]+(?: [a-zA-Z]+)*$"
+              disabled
             />
           </label>
           <div className="validator-hint hidden">
@@ -121,6 +104,7 @@ function PersonalInfo() {
               name="personalEmail"
               className="input border-none focus:outline-none focus:ring-0 p-2"
               placeholder="mail@site.com"
+              disabled
               required
             />
           </label>
@@ -160,6 +144,7 @@ function PersonalInfo() {
               minlength="10"
               maxlength="10"
               title="Must be 10 digits"
+              disabled
             />
           </label>
           <p className="validator-hint">Must be 10 digits</p>
@@ -185,6 +170,27 @@ function PersonalInfo() {
               />
             </svg>
             Edit
+          </button>
+          <button
+            class="btn btn-primary hidden"
+            id="personalInfoSaveBtn"
+            onClick={handleSaveChange}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+            Save
           </button>
         </div>
       </fieldset>
