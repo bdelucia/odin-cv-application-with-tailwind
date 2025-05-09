@@ -52,7 +52,7 @@ function PersonalInfo({ person, setPerson }) {
   return (
     <>
       <fieldset
-        className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4 flex flex-col items-start"
+        className="fieldset bg-base-200 border-secondary rounded-box w-xl border p-4 flex flex-col items-start"
         id="personalInfoContainer"
       >
         <legend className="fieldset-legend">Personal Info</legend>

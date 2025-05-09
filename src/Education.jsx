@@ -1,9 +1,9 @@
-import "./index.css";
+import './index.css';
 
 function Education() {
   return (
     <>
-      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4 flex flex-col items-start">
+      <fieldset className="fieldset bg-base-200 border-secondary rounded-box w-xl border p-4 flex flex-col items-start">
         <legend className="fieldset-legend">Education</legend>
 
         <fieldset className="fieldset">

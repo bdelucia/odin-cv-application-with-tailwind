@@ -3,7 +3,7 @@ import './index.css';
 function ResumePreview({ person }) {
   return (
     <>
-      <article className="p-2 prose prose-lg bg-base-200 border-base-300 rounded-box w-4xl border">
+      <article className="p-2 prose prose-lg bg-base-200 border-secondary rounded-box w-4xl border">
         <div className="flex flex-col items-start bg-base-100 p-4">
           <h1 className="w-full text-center">{person.personalFullName}</h1>
           <div className=" w-full flex justify-center gap-10">
