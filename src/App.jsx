@@ -9,15 +9,33 @@ import ResumePreview from "./ResumePreview.jsx";
 function App() {
   const [person, setPerson] = useState({
     personalFullName: "Todd Howard",
-    personalEmail: "mail@site.com",
+    personalEmail: "headhoncho@bethesda.com",
     personalPhone: "123-456-7890",
   });
 
   const [education, setEducation] = useState({
-    schoolName: "Imperial City University",
-    degree: "Potions and Spells",
+    schoolName: "Skingrad-uate University",
+    degree: "Potions and Applied Alchemy",
     startDate: "YYYY-MM-DD",
     endDate: "YYYY-MM-DD",
+  });
+
+  const [experience1, setExperience1] = useState({
+    jobTitle: "Game Designer",
+    companyName: "Bethesda Game Studios",
+    startDate: "YYYY-MM-DD",
+    endDate: "YYYY-MM-DD",
+    description:
+      "- Led the creative vision and development of iconic, award-winning franchises including The Elder Scrolls and Fallout, reaching tens of millions of players worldwide. - Directed cross-functional teams of 100+ developers, artists, writers, and designers across multiple AAA game titles. - Spearheaded the launch of The Elder Scrolls V: Skyrim, which sold over 30 million copies and won numerous Game of the Year awards.",
+  });
+
+  const [experience2, setExperience2] = useState({
+    jobTitle: "Potion Brewer",
+    companyName: "Skingrad-uate Research Institute",
+    startDate: "YYYY-MM-DD",
+    endDate: "YYYY-MM-DD",
+    description:
+      "Completed a rigorous four-year alchemical program with honors, specializing in combat-ready potions, resistance tonics, and field-ready antidotes. - Conducted independent research on Nirnroot reactivity under the mentorship of Master Sinderion’s successor, contributing to the Weald Journal of Rare Botanicals.",
   });
 
   return (
@@ -30,13 +48,23 @@ function App() {
         >
           <PersonalInfo person={person} setPerson={setPerson} />
           <Education education={education} setEducation={setEducation} />
-          <Experience />
+          <Experience
+            experience1={experience1}
+            setExperience1={setExperience1}
+            experience2={experience2}
+            setExperience2={setExperience2}
+          />
         </div>
         <div
           id="rightContainer"
           className="w-full flex flex-col items-center align-middle max-w-2xl pt-4 pb-4"
         >
-          <ResumePreview person={person} education={education} />
+          <ResumePreview
+            person={person}
+            education={education}
+            experience1={experience1}
+            experience2={experience2}
+          />
         </div>
       </div>
       <Footer />

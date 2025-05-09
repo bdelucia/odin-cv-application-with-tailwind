@@ -50,8 +50,8 @@ function Education({ education, setEducation }) {
     setEducation({
       schoolName: schoolName.value,
       degree: degree.value,
-      startDate: startDate.value,
-      endDate: endDate.value,
+      startDate: startDate.value || "YYYY-MM-DD",
+      endDate: endDate.value || "YYYY-MM-DD",
     });
   };
 
@@ -130,7 +130,7 @@ function Education({ education, setEducation }) {
             />
           </fieldset>
         </div>
-        <div className="flex flex-row gap-2" id="personalInfoBtnContainer">
+        <div className="flex flex-row gap-2" id="educationBtnContainer">
           <button
             class="btn btn-accent"
             id="educationEditBtn"
