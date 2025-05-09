@@ -1,9 +1,66 @@
 import "./index.css";
-
+import { useState } from "react";
+import saveIcon from "./assets/save.svg";
 function PersonalInfo() {
+  const [person, setPerson] = useState({
+    fullName: "Todd Howard",
+    email: "mail@site.com",
+    phone: "123-456-7890",
+  });
+
+  const handleEditClick = () => {
+    const fullName = document.querySelector("input[name=personalFullName]");
+    const email = document.querySelector("input[name=personalEmail]");
+    const phone = document.querySelector("input[name=personalPhone]");
+
+    fullName.value = person.fullName;
+    email.value = person.email;
+    phone.value = person.phone;
+
+    fullName.removeAttribute("readonly");
+    email.removeAttribute("readonly");
+    phone.removeAttribute("readonly");
+
+    const editBtn = document.getElementById("personalInfoEditBtn");
+    editBtn.classList.add("btn-disabled");
+
+    const personalInfoBtnContainer = document.getElementById(
+      "personalInfoBtnContainer"
+    );
+
+    const saveBtn = document.createElement("button");
+    saveBtn.classList.add("btn", "btn-accent");
+    saveBtn.id = "personalInfoSaveBtn";
+    const img = document.createElement("img");
+    img.src = saveIcon;
+    img.alt = "Save icon";
+    img.classList.add("size-6");
+    saveBtn.appendChild(img);
+    saveBtn.appendChild(document.createTextNode("Save"));
+    saveBtn.onclick = () => {
+      handleSaveChange();
+    };
+    personalInfoBtnContainer.appendChild(saveBtn);
+  };
+
+  const handleSaveChange = () => {
+    const fullName = document.querySelector("input[name=personalFullName]");
+    const email = document.querySelector("input[name=personalEmail]");
+    const phone = document.querySelector("input[name=personalPhone]");
+
+    setPerson({
+      fullName: fullName.value,
+      email: email.value,
+      phone: phone.value,
+    });
+  };
+
   return (
     <>
-      <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4 flex flex-col items-start">
+      <fieldset
+        className="fieldset bg-base-200 border-base-300 rounded-box w-xl border p-4 flex flex-col items-start"
+        id="personalInfoContainer"
+      >
         <legend className="fieldset-legend">Personal Info</legend>
 
         <fieldset className="fieldset">
@@ -29,7 +86,7 @@ function PersonalInfo() {
               type="text"
               className="input border-none focus:outline-none w-full focus:ring-0 p-2"
               placeholder="Todd Howard"
-              name="fullName"
+              name="personalFullName"
               required
               minlength="5"
               pattern="^[a-zA-Z]+(?: [a-zA-Z]+)*$"
@@ -61,6 +118,7 @@ function PersonalInfo() {
             </svg>
             <input
               type="email"
+              name="personalEmail"
               className="input border-none focus:outline-none focus:ring-0 p-2"
               placeholder="mail@site.com"
               required
@@ -94,6 +152,7 @@ function PersonalInfo() {
             </svg>
             <input
               type="tel"
+              name="personalPhone"
               className="tabular-nums border-none focus:outline-none focus:ring-0 p-2"
               required
               placeholder="(123) 456-7890"
@@ -105,6 +164,29 @@ function PersonalInfo() {
           </label>
           <p className="validator-hint">Must be 10 digits</p>
         </fieldset>
+        <div className="flex flex-row gap-2" id="personalInfoBtnContainer">
+          <button
+            class="btn btn-accent"
+            id="personalInfoEditBtn"
+            onClick={handleEditClick}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L6.832 19.82a4.5 4.5 0 0 1-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 0 1 1.13-1.897L16.863 4.487Zm0 0L19.5 7.125"
+              />
+            </svg>
+            Edit
+          </button>
+        </div>
       </fieldset>
     </>
   );
