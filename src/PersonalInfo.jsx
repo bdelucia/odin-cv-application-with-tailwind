@@ -1,4 +1,4 @@
-import './index.css';
+import "./index.css";
 
 function PersonalInfo({ person, setPerson }) {
   const handleChange = (e) => {
@@ -10,37 +10,37 @@ function PersonalInfo({ person, setPerson }) {
   };
 
   const handleEditClick = () => {
-    const fullName = document.querySelector('input[name=personalFullName]');
-    const email = document.querySelector('input[name=personalEmail]');
-    const phone = document.querySelector('input[name=personalPhone]');
+    const fullName = document.querySelector("input[name=personalFullName]");
+    const email = document.querySelector("input[name=personalEmail]");
+    const phone = document.querySelector("input[name=personalPhone]");
 
     fullName.value = person.personalFullName;
     email.value = person.personalEmail;
     phone.value = person.personalPhone;
 
-    fullName.removeAttribute('disabled');
-    email.removeAttribute('disabled');
-    phone.removeAttribute('disabled');
+    fullName.removeAttribute("disabled");
+    email.removeAttribute("disabled");
+    phone.removeAttribute("disabled");
 
-    const editBtn = document.getElementById('personalInfoEditBtn');
-    editBtn.classList.add('btn-disabled');
+    const editBtn = document.getElementById("personalInfoEditBtn");
+    editBtn.classList.add("btn-disabled");
 
-    const saveBtn = document.getElementById('personalInfoSaveBtn');
-    saveBtn.classList.remove('hidden');
+    const saveBtn = document.getElementById("personalInfoSaveBtn");
+    saveBtn.classList.remove("hidden");
   };
 
   const handleSaveChange = () => {
-    const fullName = document.querySelector('input[name=personalFullName]');
-    const email = document.querySelector('input[name=personalEmail]');
-    const phone = document.querySelector('input[name=personalPhone]');
-    const saveBtn = document.getElementById('personalInfoSaveBtn');
-    const editBtn = document.getElementById('personalInfoEditBtn');
+    const fullName = document.querySelector("input[name=personalFullName]");
+    const email = document.querySelector("input[name=personalEmail]");
+    const phone = document.querySelector("input[name=personalPhone]");
+    const saveBtn = document.getElementById("personalInfoSaveBtn");
+    const editBtn = document.getElementById("personalInfoEditBtn");
 
-    fullName.setAttribute('disabled', 'true');
-    email.setAttribute('disabled', 'true');
-    phone.setAttribute('disabled', 'true');
-    saveBtn.classList.add('hidden');
-    editBtn.classList.remove('btn-disabled');
+    fullName.setAttribute("disabled", "true");
+    email.setAttribute("disabled", "true");
+    phone.setAttribute("disabled", "true");
+    saveBtn.classList.add("hidden");
+    editBtn.classList.remove("btn-disabled");
 
     setPerson({
       personalFullName: fullName.value,
@@ -52,7 +52,7 @@ function PersonalInfo({ person, setPerson }) {
   return (
     <>
       <fieldset
-        className="fieldset bg-base-200 border-secondary rounded-box w-xl border p-4 flex flex-col items-start"
+        className="fieldset transition-[border-radius] duration-500 linear bg-base-200 border-secondary rounded-box w-xl border p-4 flex flex-col items-start"
         id="personalInfoContainer"
       >
         <legend className="fieldset-legend">Personal Info</legend>
