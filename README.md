@@ -1,12 +1,17 @@
-# React + Vite
+# React Resume Maker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This all started out with me doing it in vanilla HTML/CSS/JS. 
+When adding code to add more sub-sections of a form section, the CSS was giving me issues. 
+Specifically I had trouble dealing with added sub-sections of sections like Experience. 
+CSS was a big pain (newly added sub-sections got cut off sometimes), and the React code for adding and deleting components was hard to understand.
+Then I learned about DaisyUI through a YouTube reel
+And it is awesome, so is tailwindcss. So I started from the start with a DaisyUI project!
+Components were very easy to implement, it was nice to deal with the CSS within the HTML/JSX itself, instead of having to write it in a seperate CSS file.
+DaisyUI also provides ~30 themes with base, secondary, and accent colors, each in their own opacity/shade. 
 
-Currently, two official plugins are available:
+The light theme is corporate, because this is a resume maker.
+The dark theme is dracula.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Deployed on Vercel, surprisingly easy and free. 
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![image](https://github.com/user-attachments/assets/286ebb46-0eeb-4f30-8590-ce7583f5dab0)
